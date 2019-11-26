@@ -1,7 +1,7 @@
 {
   "version": "0.4.1",
   "description": "Tabookey Gasless Relay Framework",
-  "name": "tabookey-gasless",
+  "name": "@dmihal/tabookey-gasless",
   "license": "MIT",
   "repository": {
     "url": "https://github.com/tabookey-dev/tabookey-gasless",
@@ -44,6 +44,9 @@
     "coverage": "./scripts/run-coverage",
     "clean-coverage": "shx rm -rf coverage coverage.json",
     "coverage-if-changed": "./scripts/run-coverage-if-changed.sh npm run coverage"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
   },
   "dependencies": {
     "@0x/contracts-utils": "3.1.1",
