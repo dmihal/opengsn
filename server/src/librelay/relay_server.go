@@ -257,12 +257,14 @@ func (relay *RelayServer) GasPrice() big.Int {
 }
 
 func (relay *RelayServer) RefreshGasPrice() (err error) {
-	gasPrice, err := relay.Client.SuggestGasPrice(context.Background())
+	/*gasPrice, err := relay.Client.SuggestGasPrice(context.Background())
 	if err != nil {
 		log.Println("SuggestGasPrice() failed ", err)
 		return
 	}
 	relay.gasPrice = gasPrice.Mul(big.NewInt(0).Add(relay.GasPricePercent, big.NewInt(100)), gasPrice).Div(gasPrice, big.NewInt(100))
+	*/
+	relay.gasPrice = big.NewInt(1000000000);
 	return
 }
 
